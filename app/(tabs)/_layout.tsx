@@ -1,59 +1,109 @@
-import React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
+// app/(tabs)/_layout.tsx
+import { FontAwesome } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
 
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+export const unstable_settings = { anchor: "(tabs)" };
 
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
-      }}>
+        headerShown: false,
+        tabBarActiveTintColor: "#14B8A6",
+        tabBarInactiveTintColor: "rgba(255,255,255,0.75)",
+        tabBarLabelStyle: {
+          fontSize: 11,
+          fontWeight: "500",
+          marginBottom: 2,
+        },
+        tabBarStyle: {
+          backgroundColor: "#1E1240",
+          borderTopWidth: 0,
+          height: 72,
+          paddingTop: 8,
+          paddingBottom: 10,
+          borderTopLeftRadius: 18,
+          borderTopRightRadius: 18,
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: -2 },
+          shadowOpacity: 0.14,
+          shadowRadius: 12,
+          elevation: 14,
+        },
+        tabBarItemStyle: {
+          paddingVertical: 2,
+        },
+      }}
+    >
+      <Tabs.Screen name="index" options={{ href: null }} />
+
       <Tabs.Screen
-        name="index"
+        name="home/index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
+          title: "Inicio",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="home" size={size} color={color} />
           ),
         }}
       />
+
       <Tabs.Screen
-        name="two"
+        name="search/index"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: "Buscar",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="search" size={size} color={color} />
+          ),
         }}
       />
+
+      <Tabs.Screen
+        name="cart/index"
+        options={{
+          title: "Carro",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="shopping-cart" size={size} color={color} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="account/index"
+        options={{
+          title: "Cuenta",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="user" size={size} color={color} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen name="account/inbox/index" options={{ href: null }} />
+      <Tabs.Screen name="account/inbox/[id]" options={{ href: null }} />
+      <Tabs.Screen name="account/notifications/index" options={{ href: null }} />
+      <Tabs.Screen name="account/payments/index" options={{ href: null }} />
+      <Tabs.Screen name="account/portfolio/index" options={{ href: null }} />
+      <Tabs.Screen name="account/profile/index" options={{ href: null }} />
+      <Tabs.Screen name="account/settings/index" options={{ href: null }} />
+      <Tabs.Screen name="account/favorites/index" options={{ href: null }} />
+      <Tabs.Screen name="account/history/index" options={{ href: null }} />
+      <Tabs.Screen name="account/history-pro/index" options={{ href: null }} />
+      <Tabs.Screen name="account/profile/create-service" options={{ href: null }} />
+      <Tabs.Screen name="account/profile/favorites" options={{ href: null }} />
+      <Tabs.Screen name="account/profile/myservices" options={{ href: null }} />
+      <Tabs.Screen name="account/profile/portfolio" options={{ href: null }} />
+      <Tabs.Screen name="account/profile/requests" options={{ href: null }} />
+      <Tabs.Screen name="account/profile/schedule" options={{ href: null }} />
+
+      {/* nuevas */}
+      <Tabs.Screen name="booking/index" options={{ href: null }} />
+      <Tabs.Screen name="booking/confirmation" options={{ href: null }} />
+      <Tabs.Screen name="service/[id]" options={{ href: null }} />
+      <Tabs.Screen name="cart/checkout/index" options={{ href: null }} />
+
+      {/* viejas, por si aún existen */}
+      <Tabs.Screen name="home/booking/index" options={{ href: null }} />
+      <Tabs.Screen name="home/booking/confirmation" options={{ href: null }} />
+      <Tabs.Screen name="home/service/[id]" options={{ href: null }} />
     </Tabs>
   );
 }

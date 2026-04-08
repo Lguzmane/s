@@ -3,15 +3,22 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["/*"]
+    },
+    "types": [
+      "expo-router",
+      "nativewind/types"
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "nativewind-env.d.ts",
+    "env.d.ts",
+    "__tests__/seed/load.js"
   ]
 }

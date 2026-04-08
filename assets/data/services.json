@@ -1,0 +1,133 @@
+﻿{
+  "categorias": [
+    {
+      "nombre": "Gasfitería",
+      "servicios": [
+        "Reparación de fugas",
+        "Destape de cañerías",
+        "Instalación de grifería",
+        "Cámara desgrasadora",
+        "Mantención de calefont",
+        "Instalación de sanitarios",
+        "Detección de filtraciones",
+        "Cambio de llaves de paso"
+      ]
+    },
+    {
+      "nombre": "Electricidad",
+      "servicios": [
+        "Instalación de enchufes e interruptores",
+        "Cambio de luminarias",
+        "Tableros eléctricos",
+        "Certificación básica (TE1)",
+        "Canalización y cableado",
+        "Detección de cortocircuitos",
+        "Instalación de termostatos",
+        "Backups/UPS domiciliarios"
+      ]
+    },
+    {
+      "nombre": "Carpintería",
+      "servicios": [
+        "Muebles a medida",
+        "Instalación de puertas",
+        "Closets y clósets modulares",
+        "Reparación de muebles",
+        "Instalación de molduras y guardapolvos",
+        "Decks y terrazas",
+        "Barnizado y pintura de madera"
+      ]
+    },
+    {
+      "nombre": "Pintura",
+      "servicios": [
+        "Pintura interior",
+        "Pintura exterior",
+        "Empaste y masillado",
+        "Tratamiento de humedad",
+        "Esmalte al agua/madera/metal",
+        "Sellos y primers",
+        "Retiro de empapelado"
+      ]
+    },
+    {
+      "nombre": "Jardinería",
+      "servicios": [
+        "Mantención de jardines",
+        "Poda y despeje",
+        "Instalación de riego",
+        "Paisajismo básico",
+        "Control de malezas",
+        "Fertilización",
+        "Césped (siembra/tepe)"
+      ]
+    },
+    {
+      "nombre": "Aseo y Limpieza",
+      "servicios": [
+        "Limpieza domiciliaria",
+        "Limpieza profunda",
+        "Limpieza de mudanza",
+        "Limpieza de alfombras y tapices",
+        "Desinfección",
+        "Lavado de vidrios"
+      ]
+    },
+    {
+      "nombre": "Cocina y Preparación de Alimentos",
+      "servicios": [
+        "Chef a domicilio",
+        "Banquetería y coffee break",
+        "Meal prep semanal",
+        "Clases de cocina",
+        "Pastelería y repostería por encargo",
+        "Asesoría en menús"
+      ]
+    },
+    {
+      "nombre": "Computación y Soporte",
+      "servicios": [
+        "Formateo e instalación de SO",
+        "Respaldo y recuperación básica",
+        "Optimización de equipos",
+        "Instalación de impresoras",
+        "Redes Wi-Fi domiciliarias",
+        "Armado de PC",
+        "Soporte remoto"
+      ]
+    },
+    {
+      "nombre": "Transporte y Fletes",
+      "servicios": [
+        "Mudanzas pequeñas",
+        "Retiro de escombros",
+        "Fletes urbanos",
+        "Armado/Desarmado básico",
+        "Embalaje",
+        "Traslado de muebles"
+      ]
+    },
+    {
+      "nombre": "Cuidado Personal",
+      "servicios": [
+        "Cortes de cabello",
+        "Manicure y pedicure",
+        "Maquillaje a domicilio",
+        "Depilación",
+        "Masajes de relajación",
+        "Lifting de pestañas"
+      ]
+    }
+  ],
+  "servicios_populares": [
+    "Reparación de fugas",
+    "Instalación de enchufes e interruptores",
+    "Pintura interior",
+    "Mantención de jardines",
+    "Limpieza profunda",
+    "Chef a domicilio",
+    "Formateo e instalación de SO",
+    "Mudanzas pequeñas",
+    "Manicure y pedicure"
+  ]
+}
