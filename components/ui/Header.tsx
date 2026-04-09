@@ -34,7 +34,7 @@ export default function Header() {
 
         {user ? (
           <>
-            <Link href="/profile" asChild>
+            <Link href="/account/profile" asChild>
               <Pressable>
                 <Text className="text-base text-gray-700">{user.nombre}</Text>
               </Pressable>

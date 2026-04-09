@@ -402,9 +402,10 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: "#65F7F7",
     borderRadius: 12,
-    paddingVertical: 4,
+    paddingVertical: 10,
     paddingHorizontal: 16,
-    minHeight: 40,
+    minHeight: 44,
+    textAlignVertical: "center",
   },
 
   // SUGERENCIAS (autocomplete) — overlay dentro del propio campo
@@ -451,7 +452,7 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: "#65F7F7",
     borderRadius: 12,
-    paddingVertical: 4,
+    paddingVertical: 10,
     paddingHorizontal: 16,
     minHeight: 44,
     justifyContent: "center",

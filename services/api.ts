@@ -1,9 +1,33 @@
-//services/api.ts 
+//services/api.ts
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 import { tokenStore } from '../utils/tokenStore';
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://192.168.1.84:8081';
+const LOCAL_API_PORT = 3000;
+
+/**
+ * URL por defecto para desarrollo local sin .env:
+ * - iOS simulador / web: localhost
+ * - Android emulador: 10.0.2.2 (equivalente al host de tu máquina)
+ * En dispositivo físico, define EXPO_PUBLIC_API_URL (ej. http://192.168.x.x:3000).
+ */
+function defaultDevBaseUrl(): string {
+  if (Platform.OS === 'android') {
+    return `http://10.0.2.2:${LOCAL_API_PORT}`;
+  }
+  return `http://localhost:${LOCAL_API_PORT}`;
+}
+
+function resolveApiBaseUrl(): string {
+  const fromEnv = process.env.EXPO_PUBLIC_API_URL?.trim();
+  if (fromEnv) {
+    return fromEnv.replace(/\/+$/, '');
+  }
+  return defaultDevBaseUrl();
+}
+
+const API_URL = resolveApiBaseUrl();
 
 interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
   _retry?: boolean;

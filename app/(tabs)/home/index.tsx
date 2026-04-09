@@ -406,7 +406,7 @@ export default function Home() {
     handleAuthAction(() => router.push("/(tabs)/account/history-pro" as any));
 
   const goPortfolio = () =>
-    handleAuthAction(() => router.push("/(tabs)/account/profile/portfolio" as any));
+    handleAuthAction(() => router.push("/(tabs)/account/portfolio" as any));
 
   const goPendingRequests = () =>
     handleAuthAction(() => router.push("/(tabs)/account/profile/requests" as any));

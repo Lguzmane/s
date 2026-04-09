@@ -338,7 +338,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.16,
     shadowRadius: 22,
     elevation: 12,
-    overflow: "hidden",
+    // Permite que dropdowns/autocomplete puedan "flotar" sin recortarse.
+    overflow: "visible",
   },
 
   sheetSurface: {
@@ -346,7 +347,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     borderTopLeftRadius: 28,
     borderTopRightRadius: 28,
-    overflow: "hidden",
+    overflow: "visible",
   },
 
   handle: {
